@@ -5,20 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina</title>
-    <link href='./style.css' rel='stylesheet'>
+    <title>PaginaTienda</title>
+    <link href='./styletienda.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/7f835e10a2.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <header>
-
-        <div class="Portada">
-            <img id='Fondo-Portada' src='http://www.solofondos.com/wp-content/uploads/2015/12/Fondos-de-minecraft.jpg' alt='Fondo de Minecraft'>
+        <div id="sideBarNav" class="sidenav">
+            <a href="./index.html">Inicio</a>
+            <a href="https://noobcraft.es/#about">Sobre nosotros</a>
+            <a href="./tienda.html">Tienda</a>
+            <a href="https://discord.gg/noobcraft">Discord</a>
+            <a href="https://twitter.com/NoobCraftNT">Twitter</a>
+            <a class='sidenav2' href='./logging/login.html'>Ingresar</a>
+            <a class='sidenav2' href='./logging/register.html'>Registrarse</a>
+            <div class="icon2">
+                <i class="fas fa-times"></i>
+            </div>
         </div>
-        <div>
-            <img id="Logo" src="//dunb17ur4ymx4.cloudfront.net/webstore/logos/b242e18dcb314f0f05844f3f337158380ccc5cde.png" alt="Logo de Noobcraft Tienda Noobcraft">
+        <div class="icon">
+            <i class="fas fa-bars"></i>
         </div>
     </header>
+
+
+    <div class="producto">
+        <img src="images/Novidades/Novidade1.jpg" alt="" class="produto__img">
+        <div class="productDescription">
+            <img class='productoimg' src='data:image/jpeg;base64,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'>
+            <h3 class="producto__title">Unban</h3>
+            <spam class="producto__price">$90.00</spam>
+        </div>
+        <a href=""><i class="produto__icon fas fa-cart-plus"></i></a>
+    </div>
 
     <script src='./code.js'></script>
 </body>
