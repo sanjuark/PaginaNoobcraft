@@ -37,19 +37,50 @@ fetch("./db/carrito.json")
 let carrito = JSON.parse(localStorage.getItem('carrito'));
 let total = 0;
 
-function agregarAlCarrito(id) {
-    let productAdd = baseDatos.find(prod => prod.id === id);
-    console.log(carrito);
-    carrito.push(productAdd)
-    localStorage.setItem('carrito', JSON.stringify(carrito))
-};
-
-
 if (!carrito) {
     carrito = []
 };
 
+carrito && carrito.forEach(product => {
+    console.log(product);
+    $("#productos-carrito").append(`
+    <div class='producto'>
+    <span class='nombre-producto'>${product.nombre} $${product.precio}</span><img class='img-preview' src='${product.img}'>
+    <button onClick="borrarCarrito(${product.id})" id='borrar-carrito-btn'><i id='borrar-carrito' class="fas fa-times"></i></button>
+    </div>
+    `);
+});
+
+function actualizarCarrito() {
+    $('#productos-carrito').html('');
+    carrito && carrito.forEach(product => {
+        $("#productos-carrito").append(`
+    <div class='producto'>
+    <span class='nombre-producto'>${product.nombre} $${product.precio}</span><img class='img-preview' src='${product.img}'>
+    <button onClick="borrarCarrito(${product.id})" id='borrar-carrito-btn'><i id='borrar-carrito' class="fas fa-times"></i></button>
+    </div>
+    `);
+    })
+};
+
+function agregarAlCarrito(id) {
+    let productAdd = baseDatos.find(prod => prod.id === id);
+    console.log(carrito);
+    carrito.push(productAdd);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarCarrito();
+};
+
+function borrarCarrito(id) {
+    let productRemove = carrito.findIndex(product => product.id === id);
+    carrito.splice(productRemove, 1);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarCarrito();
+};
+
+
 function vaciarCarrito() {
-    localStorage.clear()
-    carrito = []
+    localStorage.clear();
+    carrito = [];
+    actualizarCarrito();
 };
