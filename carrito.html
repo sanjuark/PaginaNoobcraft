@@ -1,25 +1,19 @@
 <!DOCTYPE html>
-<lang="en">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PaginaTienda</title>
-        <link href='./style/styletienda.css' rel='stylesheet'>
-        <script src="https://kit.fontawesome.com/7f835e10a2.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="./style/stylecarrito.css">
+    <script src="https://kit.fontawesome.com/7f835e10a2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
 
-    </head>
-
+<body>
+    <!--MENU DE NAVEGACION-->
     <header>
-        <div class='FondoHeader'>
-            <img class='crop' src='https://fondosmil.com/fondo/22204.jpg'>
-            <div class='logo'>
-                <img src='//dunb17ur4ymx4.cloudfront.net/webstore/logos/b242e18dcb314f0f05844f3f337158380ccc5cde.png'>
-            </div>
-        </div>
-        <!--MENU NAV-->
         <nav class='pc'>
             <div id="topnav" class="topnav">
                 <a class='txtnav' href="./index.html">Inicio</a>
@@ -46,14 +40,13 @@
         </nav>
     </header>
 
-    <!-- PRODUCTOS  (Carrito)-->
-    <div class='Productos'>
-        <ul id='lista-prod'>
-        </ul>
+    <button onClick="vaciarCarrito()" id='vaciar-carrito'>Vaciar carrito</button>
+    <div id='carrito-div'>
+        <div id='productos-carrito'></div>
     </div>
+    <button id='comprar'>Comprar</button>
+    <script src="code.js"></script>
+    <script src="carrito.js"></script>
+</body>
 
-
-    <script src='./code.js'></script>
-    </body>
-
-    </html>
+</html>

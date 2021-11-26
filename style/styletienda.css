@@ -1,0 +1,228 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: rgb(139, 218, 255);
+    }
+    
+    .sidenav {
+        background-repeat: no-repeat;
+        text-align: center;
+        color: #555;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 32px;
+        padding-top: 40vh;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .btn {
+        border: none;
+    }
+    
+    #icon .fas {
+        color: rgb(0, 0, 0);
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 30px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+    }
+    
+    #icon2 {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        display: flex;
+    }
+    
+    .sidenav2 {
+        background-color: rgb(63, 98, 195);
+    }
+    
+    .sidenav {
+        height: 100%;
+        width: 0;
+        background-color: #111;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.6s;
+    }
+    
+    .sidenav a {
+        padding: 9px 9px 9px 33px;
+        text-decoration: none;
+        font-size: 22px;
+        color: #f1f1f1;
+        display: block;
+        transition: 0.4s;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    
+    .sidenav a:hover {
+        background: #2DBACB;
+    }
+    
+    .sidenav .fa-times {
+        background-color: black;
+        color: white;
+        border: none;
+        font-size: 20px;
+    }
+    
+    .FondoHeader {
+        width: 1920px;
+        height: 400px;
+        overflow: hidden;
+        margin: 0px;
+        position: relative;
+    }
+    
+    .logo {
+        position: absolute;
+        width: 51%;
+        height: 37%;
+        top: -53px;
+        left: 700px;
+    }
+    
+    .FondoHeader>.crop {
+        position: absolute;
+        right: 0%;
+        top: -100%;
+        bottom: 100%;
+        margin: auto;
+        min-height: 100%;
+        min-width: 100%;
+        border-radius: 3%;
+    }
+    /* PRODUCTOS */
+    
+    .Productos #lista-prod {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    .productos {
+        text-align: center;
+        width: 230px;
+        height: 240px;
+        margin-left: 20px;
+        background-color: white;
+        box-shadow: #555;
+        border-radius: 6%;
+    }
+    
+    .img {
+        width: 110px;
+        height: 160px;
+        border-radius: 6%;
+        margin-top: 20px;
+    }
+    /* Responsive */
+    
+    @media screen and (min-width: 900px) {
+        .btn {
+            visibility: hidden;
+        }
+        .topnav {
+            background-color: rgba(1, 143, 187, 0.568);
+            position: absolute;
+            top: 355px;
+            left: 740px;
+            background: rgba( 255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+            backdrop-filter: blur( 20px);
+            -webkit-backdrop-filter: blur( 20px);
+            border: 1px solid rgba( 255, 255, 255, 0.18);
+            font-size: 20px;
+        }
+        .txtnav:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            height: 1em;
+            width: 100%;
+            border-bottom: 1px solid;
+            margin-top: 10px;
+            opacity: 0;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+        }
+        .txtnav:hover:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        .txtnav {
+            color: rgb(0, 0, 0);
+            text-decoration-line: none;
+        }
+        .sidenav2 {
+            background: rgba(151, 151, 151, 0.774);
+            color: white;
+            text-decoration-line: none;
+        }
+        .log {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            font-size: 20px;
+            background: rgba(149, 149, 149, 0.3);
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+            backdrop-filter: blur( 20px);
+            -webkit-backdrop-filter: blur( 20px);
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18);
+        }
+    }
+    
+    @media screen and (max-width: 1200px) {
+        .sidenav2 {
+            background-color: rgb(63, 98, 195);
+        }
+        .topnav {
+            visibility: hidden;
+        }
+        .btn {
+            visibility: visible;
+        }
+        .FondoHeader {
+            display: none;
+        }
+        body {
+            background-image: url(https://www.xtrafondos.com/wallpapers/vertical/minecraft-dungens-jungle-awaens-hero-5659.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .Productos #lista-prod {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
+        .Productos {
+            text-align: center;
+            margin: 30vh 20px 20px 20px;
+            background-color: white;
+            box-shadow: #555;
+            border-radius: 6%;
+        }
+    }

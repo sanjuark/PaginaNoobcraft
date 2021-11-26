@@ -1,0 +1,223 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(139, 218, 255);
+        }
+        
+        .sidenav {
+            background-repeat: no-repeat;
+            text-align: center;
+            color: #555;
+            font-family: 'Roboto';
+            font-weight: 300;
+            font-size: 32px;
+            padding-top: 40vh;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .btn {
+            border: none;
+        }
+        
+        #icon .fas {
+            color: rgb(255, 255, 255);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 30px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+        }
+        
+        #icon2 {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            display: flex;
+        }
+        
+        .sidenav2 {
+            background-color: rgb(63, 98, 195);
+        }
+        
+        .sidenav {
+            height: 100%;
+            width: 0;
+            background-color: #111;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.6s;
+        }
+        
+        .sidenav a {
+            padding: 9px 9px 9px 33px;
+            text-decoration: none;
+            font-size: 22px;
+            color: #f1f1f1;
+            display: block;
+            transition: 0.4s;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        
+        .sidenav a:hover {
+            background: #2DBACB;
+        }
+        
+        .sidenav .fa-times {
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 20px;
+        }
+        /* CARRITO */
+        
+        #comprar {
+            position: flex;
+            font-size: 25px;
+            color: rgb(65, 155, 65);
+            margin-left: 15vh;
+        }
+        
+        #carrito-div {
+            height: 40vh;
+            position: flex;
+            align-self: center;
+            margin: 4vh 15vh 2vh 15vh;
+            border: 1px solid;
+            background: white;
+            overflow-y: scroll;
+            position: flex;
+        }
+        
+        .producto {
+            margin-top: 1rem;
+            position: flex;
+            flex-direction: column;
+        }
+        
+        .nombre-producto {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        
+        #productos-carrito {
+            height: 2vh;
+            margin-top: 1vh;
+            align-items: flex-start;
+        }
+        
+        #borrar-carrito-btn {
+            margin-left: 100rem;
+            align-self: flex-end;
+            background-color: none;
+        }
+        
+        #borrar-carrito {
+            font-size: 20px;
+            color: red;
+        }
+        
+        #vaciar-carrito {
+            position: flex;
+            margin-left: 15vh;
+            font-size: 20px;
+            color: red;
+        }
+        
+        .img-preview {
+            width: 1.5%;
+            margin-left: 3rem;
+            align-self: flex-end;
+        }
+        /* RESPONSIVE */
+        
+        @media screen and (min-width: 900px) {
+            .btn {
+                visibility: hidden;
+            }
+            .topnav {
+                background-color: rgba(1, 143, 187, 0.568);
+                position: flex;
+                top: 0px;
+                text-align: end;
+                background: rgba( 255, 255, 255, 0.3);
+                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+                backdrop-filter: blur( 20px);
+                -webkit-backdrop-filter: blur( 20px);
+                border: 1px solid rgba( 255, 255, 255, 0.18);
+                font-size: 25px;
+            }
+            .txtnav:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                display: inline-block;
+                height: 1em;
+                width: 100%;
+                border-bottom: 1px solid;
+                margin-top: 10px;
+                opacity: 0;
+                -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+                transition: opacity 0.35s, transform 0.35s;
+                -webkit-transform: scale(0, 1);
+                transform: scale(0, 1);
+            }
+            .txtnav:hover:after {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            .txtnav {
+                color: rgb(0, 0, 0);
+                text-decoration-line: none;
+            }
+            .sidenav2 {
+                background: rgba(151, 151, 151, 0.774);
+                color: white;
+                text-decoration-line: none;
+            }
+        }
+        
+        @media screen and (max-width: 1200px) {
+            .sidenav2 {
+                background-color: rgb(63, 98, 195);
+            }
+            .topnav {
+                visibility: hidden;
+            }
+            .btn {
+                visibility: visible;
+            }
+            .FondoHeader {
+                display: none;
+            }
+            body {
+                background-image: url(https://www.xtrafondos.com/wallpapers/vertical/minecraft-dungens-jungle-awaens-hero-5659.jpg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+            body:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(26, 26, 26, 0.6);
+            }
+        }

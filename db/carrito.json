@@ -1,0 +1,7 @@
+[
+    { "id": 1, "nombre": "Unban", "precio": 90.0, "img": "./images/descarga.jfif", "cant": 0 },
+    { "id": 2, "nombre": "Rango Noob", "precio": 39.99, "img": "./images/unnamed.png", "cant": 0 },
+    { "id": 3, "nombre": "Rango Pro", "precio": 49.99, "img": "./images/pro.png", "cant": 0 },
+    { "id": 4, "nombre": "Rango Hacker", "precio": 59.99, "img": "./images/descarga (1).jfif", "cant": 0 },
+    { "id": 5, "nombre": "Rango Dios", "precio": 79.99, "img": "./images/unnamed (1).png", "cant": 0 }
+]

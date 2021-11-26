@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(http://www.solofondos.com/wp-content/uploads/2015/12/Fondos-de-minecraft.jpg);
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #555;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 32px;
+    padding-top: 40vh;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+#Fondo-Portada {
+    position: absolute;
+    margin: -144px 0px 0px 0px;
+}
+
+
+/* Animacion about us */
+
+.word {
+    position: absolute;
+    width: 300px;
+    opacity: 0;
+}
+
+.letter {
+    display: inline-block;
+    position: relative;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+    transform: rotateX(-90deg);
+}
+
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+    color: #8e44ad;
+}
+
+.belize {
+    color: #2980b9;
+}
+
+.pomegranate {
+    color: #c0392b;
+}
+
+.green {
+    color: #16a085;
+}
+
+.midnight {
+    color: #2c3e50;
+}
+
+
+/* Animacion Texto largo */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+.info {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.info:last-of-type span {
+    margin-left: 0px;
+    animation: slidein 7s normal;
+}
+
+@keyframes showup {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        margin-left: -800px;
+    }
+    20% {
+        margin-left: -800px;
+    }
+    35% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 0px;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        width: 0px;
+    }
+    20% {
+        opacity: 1;
+        width: 0px;
+    }
+    30% {
+        width: 355px;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 355px;
+    }
+}
+
+.about {
+    position: absolute;
+    top: 470px;
+    left: 750px;
+}
+
+.info {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 150px;
+    left: 690px;
+    background-color: rgba(65, 65, 65, 0.568);
+    clip: rect(0px 100% 100% 0px);
+    position: absolute;
+    font-size: 25px;
+}
+
+.logo {
+    position: absolute;
+    top: 50px;
+    left: 700px;
+}
+
+
+/* Side Nav */
+
+.btn {
+    border: none;
+    background-color: rgb(0, 0, 0);
+}
+
+.icon .fas {
+    color: white;
+    position: absolute;
+    background-color: none;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+}
+
+.icon2 {
+    background-color: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+}
+
+.sidenav2 {
+    background-color: rgb(63, 98, 195);
+    text-decoration-line: none;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    background-color: #111;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.6s;
+}
+
+.sidenav a {
+    padding: 9px 9px 9px 33px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.4s;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.sidenav a:hover {
+    background: #2DBACB;
+}
+
+.sidenav .fa-times {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+
+/* Responsive */
+
+@media screen and (min-width: 900px) {
+    .btn {
+        visibility: hidden;
+    }
+    .topnav {
+        background-color: rgba(0, 195, 255, 0.568);
+        position: absolute;
+        top: 0px;
+        left: 730px;
+        background: rgba( 255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 20px);
+        -webkit-backdrop-filter: blur( 20px);
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    .txtnav {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        margin: 5px;
+    }
+    .txtnav:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        height: 1em;
+        width: 100%;
+        border-bottom: 1px solid;
+        margin-top: 10px;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(0, 1);
+        transform: scale(0, 1);
+    }
+    .txtnav:hover:after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    .sidenav2 {
+        background: none;
+        color: rgb(255, 255, 255);
+    }
+    .log {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        text-decoration-line: none;
+        background: rgba(144, 238, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 20px);
+        -webkit-backdrop-filter: blur( 20px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .topnav {
+        visibility: hidden;
+    }
+    .btn {
+        visibility: visible;
+    }
+    .sidenav2 {
+        visibility: hidden;
+    }
+    .log {
+        visibility: hidden;
+    }
+    #Fondo-Portada {
+        position: block;
+        margin: 0px;
+        width: 90%;
+        height: 70%;
+    }
+    .logo {
+        position: block;
+        top: 200px;
+        left: 50px;
+    }
+    .about {
+        visibility: hidden;
+    }
+    .info {
+        visibility: hidden;
+    }
+    body {
+        background: url(https://www.xtrafondos.com/wallpapers/vertical/minecraft-dungens-jungle-awaens-hero-5659.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    body:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(26, 26, 26, 0.6);
+    }
+    .icon .fas {
+        color: rgb(0, 0, 0);
+        position: absolute;
+        border: none;
+        top: 10px;
+        left: 10px;
+        font-size: 30px;
+        cursor: pointer;
+        display: flex;
+    }
+    .icon2 {
+        background-color: black;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        display: flex;
+    }
+}

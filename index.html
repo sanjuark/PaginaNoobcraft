@@ -5,36 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina</title>
-    <link href='./styleindex.css' rel='stylesheet'>
+    <title>Home</title>
+    <link href='./style/styleindex.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/7f835e10a2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
     <!--MENU DE NAVEGACION-->
     <header>
-        <div id="sideBarNav" class="sidenav">
-            <a href="./index.html">Inicio</a>
-            <a href="https://noobcraft.es/#about">Sobre nosotros</a>
-            <a href="./tienda.html">Tienda</a>
-            <a href="https://discord.gg/noobcraft">Discord</a>
-            <a href="https://twitter.com/NoobCraftNT">Twitter</a>
-            <a class='sidenav2' href='./logging/login.html'>Ingresar</a>
-            <a class='sidenav2' href='./logging/register.html'>Registrarse</a>
-            <div class="icon2">
-                <i class="fas fa-times"></i>
+        <nav>
+            <div id="topnav" class="topnav">
+                <a class='txtnav' href="./index.html">Inicio</a>
+                <a class='txtnav' href="./tienda.html">Tienda</a>
+                <a class='txtnav' href="https://discord.gg/noobcraft">Discord</a>
+                <a class='txtnav' href="https://twitter.com/NoobCraftNT">Twitter</a>
             </div>
-        </div>
-        <div class="icon">
-            <i class="fas fa-bars"></i>
-        </div>
+        </nav>
+        <nav>
+            <div id="sideBarNav" class="sidenav">
+                <a href="./index.html">Inicio</a>
+                <a href="./tienda.html">Tienda</a>
+                <a href="https://discord.gg/noobcraft">Discord</a>
+                <a href="https://twitter.com/NoobCraftNT">Twitter</a>
+                <div class="icon2">
+                    <button class='btn' onClick='cerrar()'><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="icon">
+                <button class='btn' onClick='abrir()'><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
     </header>
 
-    <div>
-        <img class='logo' src='//dunb17ur4ymx4.cloudfront.net/webstore/logos/b242e18dcb314f0f05844f3f337158380ccc5cde.png' alt='Logo de noobcraft'>
+    <div class='logo'>
+        <img src='//dunb17ur4ymx4.cloudfront.net/webstore/logos/b242e18dcb314f0f05844f3f337158380ccc5cde.png' alt='Logo de noobcraft'>
     </div>
 
+    <!-- INFO -->
+    <div class='about'>
+        <span class='word wisteria'>Sobreㅤnosotros</span>
+        <span class='word belize'>Sobreㅤnós</span>
+        <span class='word pomegranate'>Aboutㅤus</span>
+        <span class='word midnight'>關於我們</span>
+        <span class='word green'>معلومات عنا</span>
+    </div>
+
+    <div class='info'>
+        <div>
+            <span> Somos un servidor que proporciona entretenimiento </span>
+            <br>
+            <span> a usuarios de todo el mundo!</span>
+            <br>
+            <span>play.noobcraft.es</span>
+        </div>
+    </div>
 
 
     <script src='./code.js'></script>
