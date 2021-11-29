@@ -80,7 +80,7 @@ function borrarCarrito(id) {
 
 
 function vaciarCarrito() {
-    localStorage.clear();
+    localStorage.removeItem('carrito');
     carrito = [];
     actualizarCarrito();
 };
