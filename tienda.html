@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PaginaTienda</title>
+        <title>Tienda - NoobcraftNT</title>
         <link href='./style/styletienda.css' rel='stylesheet'>
         <script src="https://kit.fontawesome.com/7f835e10a2.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -34,7 +34,6 @@
                 <a href="./tienda.html">Tienda</a>
                 <a href="https://discord.gg/noobcraft">Discord</a>
                 <a href="https://twitter.com/NoobCraftNT">Twitter</a>
-                <a class='txtnav' href="carrito.html"><i class="producto__icon fas fa-cart-plus"></i></a>
                 <div id="icon2">
                     <button class='btn' onClick='cerrar()'><i class="fas fa-times"></i></button>
                 </div>
@@ -55,7 +54,7 @@
     <div id='carrito-div'>
         <div id='productos-carrito'></div>
     </div>
-    <button id='comprar'>Comprar</button>
+    <button id='comprar' onClick='comprar()'>Comprar <span id='total'> / Total: $0</span></button>
     <script src="code.js"></script>
 
     <script src='./code.js'></script>

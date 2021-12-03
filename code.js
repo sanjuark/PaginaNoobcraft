@@ -63,17 +63,26 @@ function actualizarCarrito() {
     })
 };
 
+
+
+// COMO HACER PARA Q NO SE BORRE EL TOTAL CUANDO SE RECARGA
 function agregarAlCarrito(id) {
     let productAdd = baseDatos.find(prod => prod.id === id);
     console.log(carrito);
     carrito.push(productAdd);
     localStorage.setItem('carrito', JSON.stringify(carrito));
+    total = total + productAdd.precio
+    localStorage.setItem('total', total);
+    document.getElementById('total').innerHTML = ' / Total: $' + total;
     actualizarCarrito();
 };
 
 function borrarCarrito(id) {
+    let productAdd = baseDatos.find(prod => prod.id === id);
     let productRemove = carrito.findIndex(product => product.id === id);
     carrito.splice(productRemove, 1);
+    total = total - productAdd.precio
+    document.getElementById('total').innerHTML = ' / Total: $' + total;
     localStorage.setItem('carrito', JSON.stringify(carrito));
     actualizarCarrito();
 };
@@ -81,6 +90,12 @@ function borrarCarrito(id) {
 
 function vaciarCarrito() {
     localStorage.removeItem('carrito');
+    total = 0;
+    document.getElementById('total').innerHTML = ' / Total: $' + total;
     carrito = [];
     actualizarCarrito();
 };
+
+$(document).ready(function() {
+    total = localStorage.getItem(total);
+});
