@@ -93,6 +93,7 @@
     }
     
     .logo {
+        z-index: initial;
         position: absolute;
         width: 51%;
         height: 37%;
@@ -266,6 +267,27 @@
     }
     
     @media screen and (max-width: 1200px) {
+        #comprar {
+            position: flex;
+            font-size: 25px;
+            color: rgb(65, 155, 65);
+            margin-left: 2vh;
+        }
+        #vaciar-carrito {
+            position: flex;
+            margin-left: 2vh;
+            font-size: 20px;
+            color: red;
+        }
+        #carrito-div {
+            height: 30vh;
+            position: flex;
+            align-self: center;
+            margin: 0vh 0vh 0vh 0vh;
+            border: 1px solid;
+            background: white;
+            position: flex;
+        }
         .img-preview {
             width: 5%;
             margin-left: 3rem;
